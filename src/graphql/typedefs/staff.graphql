@@ -1,0 +1,46 @@
+type Staff {
+  id: ID!
+  title: Title
+  firstName: String
+  lastName: String
+  staffID: String
+  phone: String  
+  gender: Gender
+  email: String
+  password: String
+  avatar: String
+  user: User!
+  joinedDate: DateTime
+}
+
+type RegisteredStaff {
+  id: ID!
+  title: Title
+  firstName: String
+  lastName: String
+  staffID: String
+  phone: String  
+  gender: Gender
+  email: String
+  password: String
+  avatar: String
+  user: User
+}
+
+type DeletedStaff {
+  id: ID!
+  title: Title
+  firstName: String
+  lastName: String
+  staffID: String
+  status: Int
+  message: String
+}
+
+type ReturnRegisteredStaff implements Token {
+  status: Int!
+  message: String!
+  accessToken: String!
+  refreshToken: String!
+  staff: RegisteredStaff!
+}

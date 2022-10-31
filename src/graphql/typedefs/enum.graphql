@@ -1,0 +1,31 @@
+enum Level {
+  L1
+  L2
+  L3
+  L4
+  L5
+}
+
+enum Gender {
+  Male
+  Female
+}
+
+enum Title {
+  Prof
+  Dr
+  Mr
+  Mrs
+  Miss
+}
+
+enum User {
+  Admin
+  Student
+  Staff
+}
+
+enum FileDir {
+  avatar
+  blogposts
+}

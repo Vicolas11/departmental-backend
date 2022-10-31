@@ -1,0 +1,33 @@
+type Admin {
+  id: ID!
+  firstName: String
+  lastName: String
+  email: String
+  password: String
+  avatar: String
+  user: User
+  joinedDate: DateTime
+}
+
+type RegisteredAdmin {
+  id: ID!
+  firstName: String
+  lastName: String
+  email: String
+  password: String
+  avatar: String
+  user: User
+}
+
+type DeletedAdmin {
+  id: ID!
+  email: String
+  status: Int
+  message: String
+}
+
+type ReturnRegisteredAdmin implements Token {
+  accessToken: String!
+  refreshToken: String!
+  admin: RegisteredAdmin!
+}

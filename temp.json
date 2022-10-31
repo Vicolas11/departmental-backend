@@ -1,0 +1,20 @@
+{
+  "query": "mutation Student($registeredInput: StudentInput!) { student(registeredInput: $registeredInput) { accessToken refreshToken student { id firstName lastName email matricNo phone level user }}}",
+  "variables": {
+    "registeredInput": {
+      "firstName": "Promise",
+      "lastName": "Elijah",
+      "email": "promcom@email.com",
+      "password": "1234567890",
+      "matricNo": "UJ17CHEM057",
+      "phone": "08115671236",
+      "institute": "University of Jos",
+      "department": "Biology",
+      "place": "Josite Laboratory",
+      "level": "L4",
+      "gender": "Female",
+      "address": "Bauchi Road, Main Camp, Jos",
+      "avatar": null
+    }
+  }
+}

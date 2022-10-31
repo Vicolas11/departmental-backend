@@ -1,0 +1,29 @@
+type Mutation {
+  # Upload File >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  uploadFile(input: FileInput!): UploadResponse
+  updateFile(updateInput: FileUpdateInput!): UploadResponse
+  deleteFile(deleteInput: ID!): UploadResponse
+
+  # Change Password >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  changePassword(input: ChangePswInput!) : ChangePswResponse
+
+  # Student >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  student(registerInput: StudentInput!): ReturnRegisteredStudent
+  updateStudent(updateInput: UpdateStudentInput!): ReturnRegisteredStudent
+  deleteStudent(emailInput: DeleteStudentInput!): DeletedStudent
+
+  # Staff >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  staff(registerInput: StaffInput!): ReturnRegisteredStaff
+  updateStaff(updateInput: UpdateStaffInput!): ReturnRegisteredStaff
+  deleteStaff(emailInput: DeleteStaffInput!): DeletedStaff
+
+  # Admin >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  admin(registerInput: AdminInput!): ReturnRegisteredAdmin
+  updateAdmin(updateInput: UpdateAdminInput!): ReturnRegisteredAdmin
+  deleteAdmin(emailInput: DeleteAdminInput!): DeletedAdmin
+
+  # Create BlogPost >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  blogPost(registerInput: BlogPostInput!): ReturnBlogPost
+  updateBlogPost(input: UpdateBlogPostInput!): ReturnBlogPost
+  deleteBlogPost(input: DeleteBlogPostInput!): ReturnBlogPost
+}

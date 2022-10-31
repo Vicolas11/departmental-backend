@@ -1,0 +1,18 @@
+type Query {
+  # STUDENT
+  student(id: ID!): Student
+  students: [Student]
+
+  # STAFF
+  staff(id: ID!): Staff
+  staffs: [Staff]
+
+  # BLOG
+  blog(id: ID!): Blog
+  blogs: [Blog]
+
+  # LOGIN
+  loginStudent(loginInput: StudentLoginInput!): ReturnRegisteredStudent
+  loginStaff(loginInput: StaffLoginInput!): ReturnRegisteredStaff
+  loginAdmin(loginInput: AdminLoginInput!): ReturnRegisteredAdmin
+}

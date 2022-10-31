@@ -1,0 +1,20 @@
+type Blog {
+  id: ID!
+  title: String
+  content: String
+  image: String
+  createdAt: DateTime
+}
+
+type BlogPost {
+  id: ID!
+  title: String
+  content: String
+  image: String
+}
+
+type ReturnBlogPost {
+  status: Int
+  message: String
+  blogpost: BlogPost
+}

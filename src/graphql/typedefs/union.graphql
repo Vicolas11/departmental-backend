@@ -1,0 +1,9 @@
+type JWTBox {
+  value: JWT
+}
+
+type StringBox {
+  value: String
+}
+
+union JWToken = JWTBox | StringBox

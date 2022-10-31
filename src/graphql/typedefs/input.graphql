@@ -1,0 +1,126 @@
+# Login >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+input StudentLoginInput {
+  matricNo: String!
+  password: String!
+}
+
+input StaffLoginInput {
+  email: String!
+  password: String!
+}
+
+input AdminLoginInput {
+  email: String!
+  password: String!
+}
+
+# Upload File >>>>>>>>>>>>>>>>>>>>>>
+input FileInput {
+  file: Upload
+  type: FileDir!
+}
+
+input FileUpdateInput {
+  file: Upload
+  id: ID!
+  type: FileDir!
+}
+
+# Change Password >>>>>>>>>>>>>>>>>>
+input ChangePswInput {
+  id: ID!
+  password: String!
+  con_password: String!
+  new_password: String!
+}
+
+# Student >>>>>>>>>>>>>>>>>>>>>>>>>>>
+input StudentInput {
+  firstName: String!
+  lastName: String!
+  matricNo: String!
+  phone: String!
+  level: Level
+  gender: Gender
+  email: String!
+  password: String!
+  avatar: String!
+}
+
+input UpdateStudentInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  phone: String!
+  level: Level
+  gender: Gender
+  avatar: String!
+}
+
+input DeleteStudentInput {
+  email: String!
+}
+
+# Staff >>>>>>>>>>>>>>>>>>>>>>
+input StaffInput {
+  title: Title!
+  firstName: String!
+  lastName: String!
+  staffID: String!
+  phone: String!
+  gender: Gender
+  email: String!
+  password: String!
+  avatar: String
+}
+
+input UpdateStaffInput {
+  title: Title!
+  firstName: String!
+  lastName: String!
+  email: String!
+  phone: String!
+  gender: Gender
+  avatar: String
+}
+
+input DeleteStaffInput {
+  email: String!
+}
+
+# Admin >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+input AdminInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+  avatar: String
+}
+
+input UpdateAdminInput {
+  firstName: String!
+  lastName: String!
+  avatar: String
+}
+
+input DeleteAdminInput {
+  email: String!
+}
+
+# BlogPost >>>>>>>>>>>>>>>>>>
+input BlogPostInput {
+  title: String!
+  content: String!
+  image: String!
+}
+
+input UpdateBlogPostInput {
+  id: ID!
+  title: String!
+  content: String!
+  image: String!
+}
+
+input DeleteBlogPostInput {
+  id: ID!
+}

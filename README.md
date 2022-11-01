@@ -1,3 +1,2 @@
-# eLogbook-backend
-eLogbook core backend setup using TypeScript, Prisma, Graphql with Apollo Express server.
-# departmental-backend
+# School Departmental Website Backend
+Departmental core backend setup using JavaScript, Prisma, Graphql with Apollo Express server.

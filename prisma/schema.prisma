@@ -22,6 +22,47 @@ datasource db {
 
 // Solomon Alpha >>>>>>>>>>>>>>>>>>>>>>>>>>
 
+enum Level {
+  L1  @map("100")
+  L2  @map("200")
+  L3  @map("300")
+  L4  @map("400")
+  L5  @map("500")
+}
+
+enum Title {
+  Prof @map("Professor")
+  Dr @map("Doctor")  
+  Mr
+  Mrs
+  Miss
+}
+
+enum Gender {
+  Male
+  Female
+}
+
+enum User {
+  Admin
+  Student
+  Staff
+}
+
+model Student {
+  id             String        @id @default(uuid())
+  firstName      String
+  lastName       String
+  matricNo       String        @unique
+  phone          String
+  level          Level?
+  gender         Gender?
+  email          String        @unique
+  password       String
+  avatar         String        @default("/avatar/avatar.png")
+  user           User          @default(Student)
+  joinedDate     DateTime      @default(now())
+}
 
 
 // Ahmed Mariam Seme Sci17csc026
